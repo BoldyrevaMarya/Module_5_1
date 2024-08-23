@@ -1,15 +1,15 @@
 class House:
-    def __init__(self, name, number_of_floors):
-        self.name = name
-        self.number_of_floors = number_of_floors
 
-    def go_to(self, new_floor):
-        self.new_floor = int(new_floor)
-        for i in range(1, new_floor + 1):
-            if new_floor > self.number_of_floors or new_floor < 1:
-                print('Такого этажа не существует')
-                break
-            print(i)
+    def __init__(self, name, number_of_floor):
+        self.name = name
+        self.number_of_floor = number_of_floor
+
+    def go_to (self, new_floor):
+        if new_floor > self.number_of_floor or new_floor < 1:
+            print('Такого этажа не существует')
+        else:
+            for i in range(1,new_floor + 1):
+                print(i)
 
 
 h1 = House('ЖК Горский', 18)
